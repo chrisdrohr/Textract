@@ -1,0 +1,41 @@
+{
+  "icons": [
+    {
+      "src": "icon_512x512.51f1d56c137527efb226272e70bfdf76.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_384x384.e414350cdfcc0cdb7dcbdf63c51d4551.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_256x256.148e70dfb7801cab0053e0435bcb5178.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192x192.e058c9a58df48f28024643ab038e526f.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_128x128.ac2dde7c7bb7abc635f28e6c5a7ec455.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_96x96.06038f6fe799b531887cac356bd419f2.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Textract",
+  "short_name": "Textract",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/?utm_source=installed",
+  "background_color": "#FAFAFA",
+  "theme_color": "#0D47A1"
+}

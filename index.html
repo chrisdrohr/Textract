@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Textract</title>
+  <meta name="Description" content="A Progressive Web App for extracting text from images">
+  <meta name="theme-color" content="#0D47A1">
+</head>
+<body class="background">
+
+  <header class="header primary">
+    <img alt="logo" id="logo" src="./src/logo.png">
+    <h1 class="header_title">Textract</h1>
+    <div class="header_buttons">
+      <button aria-label="add_to_home_screen" id="addToHomeScreen" class="iconButton ripple-icon">
+        Add to home screen
+      </button>
+      <button aria_label="share" id="share" class="iconButton ripple-icon">
+          share
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+      <div class="actions">
+          <input
+          accept="jpg,jpeg,JPG,JPEG,png"
+          style="display: none"
+          onchange="window.uploadImage(this)"
+          id="file"
+          type="file">
+          <label htmlFor="file">
+              <span>
+                  <button aria-label="select an image" id="fileButton" class="mdl-fab primary">
+                      <img src="./src/images/outline-add_photo_alternate-24px.svg" alt="Add a Photo">
+                  </button>
+              </span>
+            </label>
+        </input>
+      </div>
+
+    <div class="card display primary ripple empty-state">
+      <img alt="image" class="image">
+      <svg class="scanner" width="100%" height="100%">
+          <rect id="scanner1" height="100%" width="3"  fill="black"></rect>
+          <rect id="scanner2" height="3" width="100%"  fill="black"></rect>
+        </svg>
+    </div>
+    <div 
+    class="card ripple text"
+     onclick="window.copyText(this)">
+     <h2 id="textTitle"></h2>
+     <p id="text"></p>
+      </div>
+  </main>
+
+  <div class="snackBar">
+      <div class="snackBar-text"></div>
+      <div class="snackBar-buttonContainer">
+        <button role="button" aria-label="refresh_page" alt="refresh page" class="snackBar-button mdl-button primary" tabindex="0" type="button">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="loader">
+    <svg viewBox="0 0 32 32" width="32" height="32">
+      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+  </div>
+
+</body>
+
+</html>

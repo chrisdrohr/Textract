@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <title>Textract</title>
+  <meta name=Description content="A Progressive Web App for extracting text from images">
+  <meta name=theme-color content=#0D47A1>
+<meta name="theme-color" content="#0D47A1" /><link rel="manifest" href="manifest.1fdf072c39d6a46985e4f5aa9192b002.json" /><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="textract"><link rel="apple-touch-icon" sizes="57x57" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="textract"><link rel="icon" type="image/png" sizes="32x32" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/favicon-16x16.png"><link rel="shortcut icon" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/favicon.ico"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="icons-6e206337851c2ca5ad6bc15b5b1b1e5b/apple-touch-startup-image-1536x2008.png"><link href="app.css" rel="stylesheet"></head>
+<body class=background>
+
+  <header class="header primary">
+    <img alt=logo id=logo src=6e206337851c2ca5ad6bc15b5b1b1e5b.png>
+    <h1 class=header_title>Textract</h1>
+    <div class=header_buttons>
+      <button aria-label=add_to_home_screen id=addToHomeScreen class="iconButton ripple-icon">
+        Add to home screen
+      </button>
+      <button aria_label=share id=share class="iconButton ripple-icon">
+          share
+      </button>
+    </div>
+  </header>
+
+  <main class=main>
+      <div class=actions>
+          <input accept=jpg,jpeg,JPG,JPEG,png style=display:none onchange=window.uploadImage(this) id=file type=file>
+          <label htmlfor=file>
+              <span>
+                  <button aria-label="select an image" id=fileButton class="mdl-fab primary">
+                      <img src=b2479073290880e64faa5532d35bfb94.svg alt="Add a Photo">
+                  </button>
+              </span>
+            </label>
+        
+      </div>
+
+    <div class="card display primary ripple empty-state">
+      <img alt=image class=image>
+      <svg class=scanner width=100% height=100%>
+          <rect id=scanner1 height=100% width=3 fill=black></rect>
+          <rect id=scanner2 height=3 width=100% fill=black></rect>
+        </svg>
+    </div>
+    <div class="card ripple text" onclick=window.copyText(this)>
+     <h2 id=textTitle></h2>
+     <p id=text></p>
+      </div>
+  </main>
+
+  <div class=snackBar>
+      <div class=snackBar-text></div>
+      <div class=snackBar-buttonContainer>
+        <button role=button aria-label=refresh_page alt="refresh page" class="snackBar-button mdl-button primary" tabindex=0 type=button>
+        </button>
+      </div>
+    </div>
+  
+
+  <div class=loader>
+    <svg viewBox="0 0 32 32" width=32 height=32>
+      <circle id=spinner cx=16 cy=16 r=14 fill=none></circle>
+    </svg>
+  </div>
+
+<script type="text/javascript" src="app.bundle.js" async></script><script type="text/javascript" src="vendor.bundle.js" async></script></body>
+
+</html>
