@@ -42,7 +42,8 @@ bower_components
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
-
+dist/
+functions/serviceAccountKey.json
 # Dependency directories
 node_modules/
 
