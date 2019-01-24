@@ -42,8 +42,9 @@ bower_components
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
-dist/
+dist
 functions/serviceAccountKey.json
+src/scripts/Firebase.js
 # Dependency directories
 node_modules/
 

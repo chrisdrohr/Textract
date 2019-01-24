@@ -30,7 +30,7 @@ cacheAppShell = async () => {
 };
 
 self.addEventListener('activate', event => {
-  // console.log('[ServiceWorker] Activates');
+  console.log('[ServiceWorker] Activates');
   event.waitUntil(deleteCache());
   return self.clients.claim();
 });
