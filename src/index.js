@@ -3,17 +3,15 @@ import Storage from './scripts/Storage';
 import SnackBar from './views/SnackBar';
 import Image from './views/Image';
 import TextCard from './views/TextCard';
-import FileButton from './views/FileButton';
-import InstallButton from './views/InstallButton';
+import './views/FileButton';
+import './views/InstallButton';
+import './views/ShareButton';
 import Firebase from './scripts/Firebase';
-const dev = true;
+
 (function() {
   'use strict';
-
-  var app = {
+  let app = {
     actions: document.querySelector('.actions'),
-    // addToHomeScreenButton: document.getElementById('addToHomeScreen'),
-    shareButton: document.getElementById('share'),
     isLoading: true,
     isProcessing: false,
     spinner: document.querySelector('.loader'),
@@ -55,24 +53,6 @@ const dev = true;
         }
       });
   };
-  // Show install prompt
-  // app.addToHomeScreen = () => {
-  //   const prompt = app.deferredPrompt;
-  //   if (prompt) {
-  //     prompt.prompt();
-  //     prompt.userChoice
-  //       .then(choice => {
-  //         if (choice.outcome === 'accepted') {
-  //           console.log('User accepted');
-  //         } else {
-  //           console.log('User dismissed');
-  //         }
-  //         app.deferredPrompt = null;
-  //       })
-  //       .catch(error => console.log(error));
-  //   }
-  // };
-
   // Copy text from text card
   window.copyText = element => {
     const text = element.innerText;
@@ -98,7 +78,6 @@ const dev = true;
       }
     }
   };
-
   // Uploads the selected image
   window.uploadImage = input => {
     const file = input.files[0];
@@ -119,39 +98,13 @@ const dev = true;
       reader.readAsDataURL(file);
     }
   };
- 
+
   window.addEventListener('load', async () => {
     await app.loadIndexedData('src');
     await app.loadIndexedData('text');
     await Firebase.signIn().then(uid => (app.uid = uid));
     if (app.uid) {
       await app.listenToDB(app.uid);
-    }
-
-    // app.addToHomeScreenButton.addEventListener('click', () => {
-    //   app.addToHomeScreen();
-    // });
-
-    // window.addEventListener('beforeinstallprompt', event => {
-    //   event.preventDefault();
-    //   app.deferredPrompt = event;
-    //   app.addToHomeScreenButton.style.display = 'unset';
-    //   app.addToHomeScreenButton.style.opacity = 1;
-    // });
-
-    if (window.navigator.share) {
-      app.shareButton.style.display = 'visible';
-      app.shareButton.style.opacity = 1;
-      app.shareButton.addEventListener('click', () => {
-        window.navigator
-          .share({
-            title: 'Textract',
-            text: 'A Progressive Web App that extracts text from images',
-            url: 'https://textract.chrisrohr.app/'
-          })
-          .then(() => console.log('Successful share'))
-          .catch(error => console.log('Error sharing', error));
-      });
     }
 
     // if ('serviceWorker' in navigator) {
@@ -207,7 +160,6 @@ const dev = true;
       app.isLoading = false;
     }
   });
-
 })();
 
 // // Check how much local data is available
